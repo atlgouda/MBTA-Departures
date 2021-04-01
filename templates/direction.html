@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Direction{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<h5 class="card-title">Route Name: {{ route.attributes.long_name }} </h5>
+<select name="direction_select" onchange="location = this.value;">
+    <option value="#">Select Direction</option>
+    <option value="/routes/{{ route_id }}/stop/{{ stop_id }}/direction/0"> {{ route.attributes.direction_names[0] }}
+    </option>
+    <option value="/routes/{{ route_id }}/stop/{{ stop_id }}/direction/1"> {{ route.attributes.direction_names[1] }}
+    </option>
+</select>
+{% endblock %}

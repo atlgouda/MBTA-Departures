@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Route Select{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<h5>The next {{ route.attributes.direction_names[direction] }}bound {{ route.attributes.long_name }} departure from
+    {{ stop.attributes.name }} will be at:</h5>
+<h3> {{ prediction.attributes.departure_time.split("T")[1].split("-04:00")[0] }} on
+    {{ prediction.attributes.departure_time.split("T")[0] }}</h3>
+{% endblock %}

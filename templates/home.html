@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}Route Select{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<h5 class="card-title">MBTA Map</h5>
+<p class="card-text">Select light or heavy rail route.</p>
+<select name="route_select" onchange="location = this.value;">
+    {% for route in routes %}
+    <option value="/routes/{{ route.id }}"> {{ route.attributes.long_name }} </option>
+    {% endfor %}
+</select>
+{% endblock %}

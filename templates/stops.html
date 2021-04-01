@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}Stop{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<h5 class="card-title">Route Name: {{ route.attributes.long_name }} </h5>
+<p class="card-text">Select stop on route.</p>
+<select name="stop_select" onchange="location = this.value;">
+    {% for stop in stops %}
+    <option value="/routes/{{ route.id }}/stop/{{ stop.id }}"> {{ stop.attributes.name }} </option>
+    {% endfor %}
+</select>
+{% endblock %}
