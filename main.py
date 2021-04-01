@@ -42,3 +42,7 @@ def departure(stop_id, route_id, direction):
     stop = stop_raw.json()
     return render_template("departure.html", prediction=prediction['data'][0], route=selected_route['data'],
                            direction=int(direction), stop=stop['data'])
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
