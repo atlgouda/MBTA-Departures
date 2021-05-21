@@ -10,7 +10,7 @@ Initialize app with:
 python app.py
 ```
 
-Dropdown bar selections will output with next train departure.  Time is listed in a 24 hour format. To test, select multiple inputs, and verify a time in the near future is listed as next departure.
+Dropdown bar selections will output with next train departure.  Time is listed in a 24 hour format.
 
 
 > MBTA service API: https://api-v3.mbta.com/
