@@ -1,5 +1,10 @@
 # MBTA Departures
 
+Find the next MBTA train coming based on stop, line and direction. Current data based on MBTA API.
+
+### Site:
+https://nextmbtatrain.herokuapp.com/
+
 Initialize app with:
 ```
 python app.py
